@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>theunfilteredstories_ | Luxury Wedding Films & Editorial Photography</title>
+<meta name="description" content="Luxury wedding films and editorial photography in India by theunfilteredstories_." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+
+</style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- PAGE LOADER -->
+<div class="loader" id="loader">
+  <div class="loader__logo">theunfilteredstories_</div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__left">
+    <a href="#top" class="nav__logo">theunfilteredstories_</a>
+    <div class="nav__socials">
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+          <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"></polygon>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+
+  <nav class="nav__links" id="navLinks">
+    <button class="nav__close" id="navClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <a href="#films">Films</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__fallback"></div>
+
+  <video class="hero__video" id="heroVideo"
+         autoplay muted loop playsinline preload="auto"
+         poster="https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80">
+    <source src="https://cdn.coverr.co/videos/coverr-a-couple-walking-on-the-beach-2637/1080p.mp4" type="video/mp4" />
+    <source src="https://cdn.coverr.co/videos/coverr-wedding-couple-sunset-8701/1080p.mp4" type="video/mp4" />
+  </video>
+
+  <div class="hero__overlay"></div>
+
+  <!-- Floating particles -->
+  <div class="hero__particles" id="heroParticles"></div>
+
+  <button class="hero__video-toggle" id="heroVideoToggle" aria-label="Toggle background video">
+    <svg id="heroIconPause" viewBox="0 0 24 24" fill="currentColor">
+      <rect x="6" y="5" width="4" height="14" rx="1"/>
+      <rect x="14" y="5" width="4" height="14" rx="1"/>
+    </svg>
+    <svg id="heroIconPlay" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+      <polygon points="6,4 20,12 6,20"/>
+    </svg>
+  </button>
+
+  <div class="hero__content">
+    <h1 class="hero__title">
+      <span class="reveal-line" data-anim="fade-up"><span>Not every story moves you.</span></span>
+      <span class="reveal-line" data-anim="fade-up" style="transition-delay:0.3s"><span><em>Ours will.</em></span></span>
+    </h1>
+  </div>
+  <div class="hero__scroll">Scroll</div>
+</section>
+
+<!-- QUOTE 1 -->
+<section class="quote quote--gradient">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:20%;left:15%;animation-delay:0s"></span>
+  <span class="sparkle" style="top:70%;left:82%;animation-delay:1.2s"></span>
+  <span class="sparkle" style="top:35%;left:78%;animation-delay:2.1s"></span>
+  <span class="sparkle" style="top:80%;left:22%;animation-delay:0.7s"></span>
+  <div class="quote__inner" data-anim="fade-blur">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">
+      Every wedding is a film waiting to be told —
+      <span class="accent">we simply hold the camera steady.</span>
+    </p>
+    <span class="quote__attr">The Philosophy</span>
+  </div>
+</section>
+
+<!-- FILMS -->
+<section class="films" id="films">
+  <span class="section-num" data-anim="fade-left">01</span>
+  <p class="section-label" data-anim="fade-right">Selected Films</p>
+  <div class="films__grid">
+    <article class="film" data-anim="fade-up" style="transition-delay:0s"
+             data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80')"></div>
+      </div>
+      <h3>A Love Letter to Udaipur</h3>
+      <p>Wedding Film · 2024</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.15s"
+             data-img="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80')"></div>
+      </div>
+      <h3>The Long Way Home</h3>
+      <p>Wedding Film · 2024</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.3s"
+             data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80')"></div>
+      </div>
+      <h3>Monsoon Vows</h3>
+      <p>Wedding Film · 2023</p>
+    </article>
+  </div>
+</section>
+
+<!-- QUOTE 2 -->
+<section class="quote quote--gold">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:25%;left:20%;animation-delay:0.4s"></span>
+  <span class="sparkle" style="top:65%;left:75%;animation-delay:1.6s"></span>
+  <div class="quote__inner" data-anim="fade-scale">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">
+      Light. Motion. A glance held a second too long.
+      <span class="accent">That is where the story lives.</span>
+    </p>
+    <span class="quote__attr">On Craft</span>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <span class="section-num" data-anim="fade-left">02</span>
+  <div class="gallery__header">
+    <div data-anim="fade-left">
+      <p class="section-label">Gallery</p>
+      <h2 class="gallery__title">Moments, <em>framed forever.</em></h2>
+    </div>
+    <div class="gallery__controls" data-anim="fade-right">
+      <button class="gallery__btn" id="prevBtn" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="gallery__btn" id="nextBtn" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </div>
+  <div class="slider" id="slider">
+    <div class="slider__track" id="sliderTrack"></div>
+  </div>
+  <div class="gallery__dots" id="galleryDots"></div>
+</section>
+
+<!-- QUOTE 3 -->
+<section class="quote quote--rose">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:30%;left:18%;animation-delay:0.9s"></span>
+  <span class="sparkle" style="top:72%;left:80%;animation-delay:0.2s"></span>
+  <span class="sparkle" style="top:45%;left:85%;animation-delay:2.3s"></span>
+  <div class="quote__inner" data-anim="fade-rotate">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">
+      Not a highlight reel. Not a trend.
+      <span class="accent">A memory you will still feel in forty years.</span>
+    </p>
+    <span class="quote__attr">Our Promise</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-page" id="about">
+  <div class="about-page__ghost">FOUNDER</div>
+  <span class="section-num" data-anim="fade-left">03</span>
+
+  <div class="about-page__inner">
+
+    <div class="about-page__visual" data-anim="fade-right">
+      <div class="about-page__ring-wrap">
+        <div class="about-page__ring-outer"></div>
+        <div class="about-page__ring-mid"></div>
+        <div class="about-page__ring-inner"></div>
+
+        <div class="about-page__portrait"
+             style="background-image:url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=900&q=80')"></div>
+
+        <div class="about-page__badge about-page__badge--1" title="Camera">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <div class="about-page__badge about-page__badge--2" title="Award">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="6"></circle>
+            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-page__content" data-anim="fade-left">
+
+      <div class="about-page__badge-tag">
+        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Founder &amp; Lead Filmmaker
+      </div>
+
+      <h2 class="about-page__name">
+        <span class="first">Arjun</span>
+        <span class="last">Mehra</span>
+      </h2>
+
+      <p class="about-page__role">Master Storyteller · Since 2012</p>
+
+      <blockquote class="about-page__quote">
+        "Filmmaking is not just about light and sound — it's about the
+        <em>emotions we preserve</em> and the stories we leave behind for every family."
+      </blockquote>
+
+      <div class="about-page__bio">
+        <p>
+          Arjun designs for couples who celebrate unapologetically. His work —
+          an <em>alchemy of shadow and sentiment</em> — is rooted in narrative,
+          editorial composition, and a deep connection to place.
+        </p>
+        <p>
+          Born and raised in a small town in Rajasthan, Arjun draws inspiration
+          from the layered beauty of his surroundings: the dramatic glamour of
+          old-world palaces, the rich storytelling traditions of his Indian
+          heritage — influences that shape the emotional depth of his films
+          without dictating a specific aesthetic.
+        </p>
+        <p>
+          As the founder of <strong>theunfilteredstories_</strong>, he has built a
+          multi-faceted practice spanning destination weddings, editorial
+          features, and brand films. His portfolio includes collaborations with
+          luxury venues like <strong>Taj Lake Palace</strong>,
+          <strong>Rambagh Palace</strong>, and <strong>Oberoi Udaivilas</strong>,
+          where he serves as a preferred creative partner for discerning families
+          across India and abroad.
+        </p>
+        <p>
+          His work has been recognised globally, including being named to the
+          prestigious <em>Wedding Filmmakers Guild Top 100</em> and featured in
+          publications such as <strong>Vogue Weddings</strong>,
+          <strong>Brides Today</strong>, and <strong>Harper's Bazaar</strong>.
+        </p>
+      </div>
+
+      <div class="about-page__signature" data-anim="fade-up">
+        Arjun Mehra
+      </div>
+
+      <div class="about-page__socials" data-anim="fade-up" style="transition-delay:0.15s">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <a href="#" aria-label="Vimeo">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197a315.065 315.065 0 0 0 3.501-3.128C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807z"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <a href="mailto:hello@theunfilteredstories.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE 4 -->
+<section class="quote quote--dark">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:22%;left:25%;animation-delay:0.5s"></span>
+  <span class="sparkle" style="top:68%;left:78%;animation-delay:1.4s"></span>
+  <div class="quote__inner" data-anim="zoom-out">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">
+      The best films are not shot.
+      <span class="accent">They are felt.</span>
+    </p>
+    <span class="quote__attr">In Closing</span>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer class="contact" id="contact">
+  <div class="contact__fallback"></div>
+
+  <video class="contact__video" id="footerVideo"
+         autoplay muted loop playsinline preload="auto"
+         poster="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=1920&q=80">
+    <source src="https://cdn.coverr.co/videos/coverr-a-couple-in-love-1573/1080p.mp4" type="video/mp4" />
+    <source src="https://cdn.coverr.co/videos/coverr-a-wedding-couple-1583/1080p.mp4" type="video/mp4" />
+  </video>
+
+  <div class="contact__overlay"></div>
+
+  <button class="contact__video-toggle" id="footerVideoToggle" aria-label="Toggle footer video">
+    <svg id="footerIconPause" viewBox="0 0 24 24" fill="currentColor">
+      <rect x="6" y="5" width="4" height="14" rx="1"/>
+      <rect x="14" y="5" width="4" height="14" rx="1"/>
+    </svg>
+    <svg id="footerIconPlay" viewBox="0 0 24 24" fill="currentColor" style="display:none">
+      <polygon points="6,4 20,12 6,20"/>
+    </svg>
+  </button>
+
+  <div class="contact__inner">
+    <p class="section-label" data-anim="fade-down">Say Hello</p>
+    <a class="contact__mail" href="mailto:hello@theunfilteredstories.com" data-anim="fade-scale">
+      hello@theunfilteredstories.com
+    </a>
+    <div class="contact__socials" data-anim="fade-up" style="transition-delay:0.2s">
+      <a href="#">Instagram</a>
+      <a href="#">Vimeo</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p class="contact__copy" data-anim="fade-up" style="transition-delay:0.35s">
+      © <span id="year"></span> theunfilteredstories_
+    </p>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
