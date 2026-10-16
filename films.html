@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Films | theunfilteredstories_</title>
+<meta name="description" content="Selected wedding films by theunfilteredstories_." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__left">
+    <a href="index.html" class="nav__logo">theunfilteredstories_</a>
+    <div class="nav__socials">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg>
+      </a>
+    </div>
+  </div>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span></button>
+  <nav class="nav__links" id="navLinks">
+    <button class="nav__close" id="navClose" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <a href="index.html">Home</a>
+    <a href="films.html" class="active">Films</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <p class="page-hero__eyebrow">Selected Work</p>
+    <h1 class="page-hero__title">Films that <em>stay with you.</em></h1>
+    <p class="page-hero__sub">Real weddings. Real emotion. Real stories.</p>
+  </div>
+</section>
+
+<!-- FILMS GRID -->
+<section class="films">
+  <p class="section-label" data-anim="fade-right">Wedding Films</p>
+  <div class="films__grid">
+    <article class="film" data-anim="fade-up" style="transition-delay:0s"
+             data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80')"></div>
+      </div>
+      <h3>A Love Letter to Udaipur</h3>
+      <p>Wedding Film · 2024</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.15s"
+             data-img="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80')"></div>
+      </div>
+      <h3>The Long Way Home</h3>
+      <p>Wedding Film · 2024</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.3s"
+             data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80')"></div>
+      </div>
+      <h3>Monsoon Vows</h3>
+      <p>Wedding Film · 2023</p>
+    </article>
+    <article class="film" data-anim="fade-up"
+             data-img="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=900&q=80')"></div>
+      </div>
+      <h3>The Silk Route</h3>
+      <p>Wedding Film · 2023</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.15s"
+             data-img="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80')"></div>
+      </div>
+      <h3>Under the Stars</h3>
+      <p>Wedding Film · 2023</p>
+    </article>
+    <article class="film" data-anim="fade-up" style="transition-delay:0.3s"
+             data-img="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1600&q=80">
+      <div class="film__thumb-wrap">
+        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=900&q=80')"></div>
+      </div>
+      <h3>A Quiet Morning</h3>
+      <p>Wedding Film · 2022</p>
+    </article>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote quote--gradient">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:20%;left:15%"></span>
+  <span class="sparkle" style="top:70%;left:82%;animation-delay:1.2s"></span>
+  <div class="quote__inner" data-anim="fade-blur">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">
+      The best films are not shot.
+      <span class="accent">They are felt.</span>
+    </p>
+    <span class="quote__attr">In Closing</span>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__logo">theunfilteredstories_</div>
+  <nav class="footer__links">
+    <a href="index.html">Home</a>
+    <a href="films.html">Films</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer__copy">© <span id="year"></span> theunfilteredstories_</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
