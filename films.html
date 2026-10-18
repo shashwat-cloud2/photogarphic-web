@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Films | theunfilteredstories_</title>
-<meta name="description" content="Selected wedding films by theunfilteredstories_." />
+<meta name="description" content="Animated selection of wedding films and behind-the-scenes by theunfilteredstories_." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -47,65 +47,18 @@
   <div class="page-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')"></div>
   <div class="page-hero__overlay"></div>
   <div class="page-hero__content">
-    <p class="page-hero__eyebrow">Selected Work</p>
-    <h1 class="page-hero__title">Films that <em>stay with you.</em></h1>
-    <p class="page-hero__sub">Real weddings. Real emotion. Real stories.</p>
+    <p class="page-hero__eyebrow">Cinematic Stories</p>
+    <h1 class="page-hero__title">Watch them <em>unfold.</em></h1>
+    <p class="page-hero__sub">A randomised collection of our latest films and behind-the-scenes moments.</p>
   </div>
 </section>
 
-<!-- FILMS GRID -->
-<section class="films">
-  <p class="section-label" data-anim="fade-right">Wedding Films</p>
-  <div class="films__grid">
-    <article class="film" data-anim="fade-up" style="transition-delay:0s"
-             data-img="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=900&q=80')"></div>
-      </div>
-      <h3>A Love Letter to Udaipur</h3>
-      <p>Wedding Film · 2024</p>
-    </article>
-    <article class="film" data-anim="fade-up" style="transition-delay:0.15s"
-             data-img="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=900&q=80')"></div>
-      </div>
-      <h3>The Long Way Home</h3>
-      <p>Wedding Film · 2024</p>
-    </article>
-    <article class="film" data-anim="fade-up" style="transition-delay:0.3s"
-             data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80')"></div>
-      </div>
-      <h3>Monsoon Vows</h3>
-      <p>Wedding Film · 2023</p>
-    </article>
-    <article class="film" data-anim="fade-up"
-             data-img="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=900&q=80')"></div>
-      </div>
-      <h3>The Silk Route</h3>
-      <p>Wedding Film · 2023</p>
-    </article>
-    <article class="film" data-anim="fade-up" style="transition-delay:0.15s"
-             data-img="https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80')"></div>
-      </div>
-      <h3>Under the Stars</h3>
-      <p>Wedding Film · 2023</p>
-    </article>
-    <article class="film" data-anim="fade-up" style="transition-delay:0.3s"
-             data-img="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1600&q=80">
-      <div class="film__thumb-wrap">
-        <div class="film__thumb" style="background-image:url('https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=900&q=80')"></div>
-      </div>
-      <h3>A Quiet Morning</h3>
-      <p>Wedding Film · 2022</p>
-    </article>
-  </div>
+<!-- YOUTUBE VIDEO SECTION -->
+<section class="video-section" id="films">
+  <p class="section-label" data-anim="fade-right">Featured Videos</p>
+  
+  <!-- The grid where JS will inject random videos -->
+  <div class="video-grid" id="videoGrid"></div>
 </section>
 
 <!-- QUOTE -->
@@ -116,10 +69,10 @@
   <div class="quote__inner" data-anim="fade-blur">
     <span class="quote__mark">“</span>
     <p class="quote__text">
-      The best films are not shot.
-      <span class="accent">They are felt.</span>
+      Every frame is a heartbeat.
+      <span class="accent">Every cut is a breath.</span>
     </p>
-    <span class="quote__attr">In Closing</span>
+    <span class="quote__attr">The Art of Editing</span>
   </div>
 </section>
 
@@ -136,11 +89,127 @@
   <p class="footer__copy">© <span id="year"></span> theunfilteredstories_</p>
 </footer>
 
+<!-- LIGHTBOX (Customized for Video) -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
-  <img id="lightboxImg" src="" alt="" />
+  <!-- This container will hold the iframe -->
+  <div class="lightbox__video-container" id="lightboxVideoContainer"></div>
 </div>
 
 <script src="script.js"></script>
+<script>
+/* ========================================================
+   YOUTUBE RANDOMISER
+   ======================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  const videoGrid = document.getElementById('videoGrid');
+  
+  // A curated list of cinematic/wedding videos. 
+  // Replace these IDs with your own YouTube videos!
+  const videoPool = [
+    { id: '5qap5aO4i9A', title: 'A Love Letter to Udaipur', tag: 'Wedding Film · 2024' },
+    { id: 'jfKfPfyJRdk', title: 'The Long Way Home', tag: 'Wedding Film · 2024' },
+    { id: '4xDzrJKXOOY', title: 'Monsoon Vows', tag: 'Wedding Film · 2023' },
+    { id: '21X5lGlDOfg', title: 'The Silk Route', tag: 'Wedding Film · 2023' },
+    { id: 'V-_O7nl0Ii0', title: 'Under the Stars', tag: 'Wedding Film · 2023' },
+    { id: 'k85mRPqvMbE', title: 'A Quiet Morning', tag: 'Editorial Film · 2022' },
+    { id: 'lTRiuFIWV54', title: 'Bridal Portraits', tag: 'Behind the Scenes' },
+    { id: 'MVPTGNGiI-4', title: 'The First Look', tag: 'Wedding Film · 2022' },
+    { id: 'F4neLJQC1_E', title: 'Golden Hour', tag: 'Couple Session' }
+  ];
+
+  // Shuffle the array randomly
+  const shuffled = videoPool.sort(() => 0.5 - Math.random());
+  
+  // Select the first 6 for the grid
+  const selectedVideos = shuffled.slice(0, 6);
+
+  // Build the HTML for each video card
+  selectedVideos.forEach((video, index) => {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.dataset.anim = 'fade-up';
+    // Stagger the animation delay
+    card.style.transitionDelay = (index * 0.1) + 's';
+    
+    // Construct the YouTube thumbnail URL
+    const thumbUrl = `https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`;
+
+    card.innerHTML = `
+      <div class="video-card__thumb">
+        <img src="${thumbUrl}" alt="${video.title}" class="video-card__img" loading="lazy" />
+        <div class="video-card__play">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="video-card__info">
+        <h3>${video.title}</h3>
+        <p>${video.tag}</p>
+      </div>
+    `;
+
+    // Add click event to open lightbox with the YouTube iframe
+    card.addEventListener('click', () => {
+      openVideoLightbox(video.id);
+    });
+
+    videoGrid.appendChild(card);
+  });
+
+  // Observe the newly created cards for the fade-in animation
+  document.querySelectorAll('.video-card').forEach(el => revealObserver.observe(el));
+});
+
+/* ========================================================
+   VIDEO LIGHTBOX OVERRIDE
+   ======================================================== */
+function openVideoLightbox(videoId) {
+  const lightbox = document.getElementById('lightbox');
+  const container = document.getElementById('lightboxVideoContainer');
+  const closeBtn = document.getElementById('lightboxClose');
+
+  // Inject the YouTube iframe with autoplay
+  container.innerHTML = `
+    <iframe src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+  `;
+  
+  // Hide the default image element used on other pages
+  document.getElementById('lightboxImg').style.display = 'none';
+  
+  // Show the lightbox
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden';
+
+  // Function to close and clear the iframe (stops audio/video immediately)
+  const closeVideo = () => {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    container.innerHTML = ''; // Destroy iframe
+    document.getElementById('lightboxImg').style.display = 'block'; // Reset for other pages
+    closeBtn.removeEventListener('click', closeVideo);
+    lightbox.removeEventListener('click', outsideClick);
+    document.removeEventListener('keydown', escClose);
+  };
+
+  const outsideClick = (e) => {
+    if (e.target === lightbox) closeVideo();
+  };
+  const escClose = (e) => {
+    if (e.key === 'Escape') closeVideo();
+  };
+
+  // Attach event listeners specifically for this instance
+  closeBtn.addEventListener('click', closeVideo);
+  lightbox.addEventListener('click', outsideClick);
+  document.addEventListener('keydown', escClose);
+}
+</script>
+
 </body>
 </html>
