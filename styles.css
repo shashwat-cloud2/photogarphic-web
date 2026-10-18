@@ -972,4 +972,135 @@ section { padding: 8rem 2rem; position: relative; }
 @media (prefers-reduced-motion: reduce) {
   .hero__video, .contact__video,
   .quote__ring, .about-page__ring-outer, .about-page__portrait { animation: none; }
+} 
+/* ========================================================
+   YOUTUBE VIDEO SECTION (Films Page)
+   ======================================================== */
+.video-section {
+  background: var(--deep);
+  color: var(--cream);
+  padding: 8rem 2rem;
+  position: relative;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  cursor: pointer;
+  background: #111;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(201,168,106,0.15);
+  transition: transform 0.6s cubic-bezier(.2,.7,.2,1), box-shadow 0.6s ease, border-color 0.6s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(201,168,106,0.6);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 30px rgba(201,168,106,0.15);
+}
+
+.video-card__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.2) brightness(0.85);
+  transition: transform 1.2s cubic-bezier(.2,.7,.2,1), filter 0.8s ease;
+}
+
+.video-card:hover .video-card__img {
+  transform: scale(1.08);
+  filter: grayscale(0) brightness(1.05);
+}
+
+/* Play Button Overlay */
+.video-card__play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10,10,10,0.3);
+  transition: background 0.4s ease;
+}
+
+.video-card:hover .video-card__play {
+  background: rgba(10,10,10,0.1);
+}
+
+.video-card__play svg {
+  width: 60px;
+  height: 60px;
+  color: var(--accent);
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.6));
+  transition: transform 0.4s cubic-bezier(.2,.7,.2,1), color 0.4s ease;
+}
+
+.video-card:hover .video-card__play svg {
+  transform: scale(1.15);
+  color: var(--cream);
+}
+
+.video-card__info {
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(20,18,16,0) 0%, rgba(20,18,16,1) 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.video-card__info h3 {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+
+.video-card__info p {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Lightbox YouTube Override */
+.lightbox__video-container {
+  width: 90vw;
+  max-width: 1200px;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  animation: fadeInScale 0.6s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.lightbox__video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.8);
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+  .video-card__play svg {
+    width: 48px;
+    height: 48px;
+  }
 }
