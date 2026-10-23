@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery | Theunfilteredstories_</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="loader" id="loader">
+  <img src="IMG_5128.png" alt="Theunfilteredstories" class="loader__logo-img" />
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__left">
+    <a href="index.html" class="nav__logo">
+      <img src="IMG_5128.png" alt="Theunfilteredstories Logo" class="nav__logo-img" />
+    </a>
+    <div class="nav__socials">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+      <a href="https://youtube.com" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg></a>
+    </div>
+  </div>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span></button>
+  <nav class="nav__links" id="navLinks">
+    <button class="nav__close" id="navClose" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <a href="index.html">Home</a>
+    <a href="films.html">Films</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero__bg" id="heroBg"></div>
+  <div class="page-hero__overlay"></div>
+  <div class="page-hero__content">
+    <p class="page-hero__eyebrow" id="heroEyebrow">Editorial Photography</p>
+    <h1 class="page-hero__title" id="heroTitle">The Collection</h1>
+    <p class="page-hero__sub" id="heroSub">A collection of stills from across India.</p>
+  </div>
+</section>
+
+<section class="films" style="background:var(--cream-2); color:var(--ink);">
+  <p class="section-label" data-anim="fade-right" id="galleryLabel">All Images</p>
+  <div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<section class="quote quote--rose">
+  <div class="quote__ring"></div>
+  <span class="sparkle" style="top:30%;left:18%"></span>
+  <div class="quote__inner" data-anim="fade-rotate">
+    <span class="quote__mark">“</span>
+    <p class="quote__text">Not a highlight reel. Not a trend. <span class="accent">A memory you will still feel in forty years.</span></p>
+    <span class="quote__attr">Our Promise</span>
+  </div>
+</section>
+
+<footer class="footer">
+  <a href="index.html" class="footer__logo">
+    <img src="IMG_5128.png" alt="Theunfilteredstories Logo" class="footer__logo-img" />
+  </a>
+  <nav class="footer__links">
+    <a href="index.html">Home</a><a href="films.html">Films</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  </nav>
+  <p class="footer__copy">© <span id="year"></span> Theunfilteredstories_</p>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+  <img id="lightboxImg" src="" alt="Full resolution image" />
+</div>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryGrid = document.getElementById('galleryGrid');
+
+  const clientGalleries = {
+    'udaipur': {
+      name: 'Sanya & Kabir',
+      location: 'Udaipur · March 2024',
+      cover: 'https://blogcdn.paperlust.co/blog/wp-content/uploads/2026/08/tof-fix-21069-p0-1785774027.jpg',
+      images: [
+        'https://blogcdn.paperlust.co/blog/wp-content/uploads/2026/08/tof-fix-21069-p0-1785774027.jpg',
+        'https://img.magnific.com/premium-photo/wedding-ceremony-newlyweds-country-cottage-green-hill_419896-17432.jpg?semt=ais_hybrid&w=740&q=80',
+        'https://img.magnific.com/free-photo/young-wedding-couple-their-wedding_1303-28336.jpg?semt=ais_hybrid&w=740&q=80',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaXvqz2KJpFMF3M_eUaxPN-b4HMy55-ocKHJwUbOhkwN85Q9ZEzbjKoMU&s=10',
+        'https://mixingimages.in/wp-content/uploads/2025/05/Marriage-Wedding-Couple-Poses-11.jpg',
+        'https://p.potaufeu.asahi.com/72fa-p/picture/31452094/a72a3eefdcdcc1cd26597e82e25e2072.jpg'
+      ]
+    },
+    'jodhpur': {
+      name: 'Meera & Rohan',
+      location: 'Jodhpur · December 2023',
+      cover: 'https://static.toiimg.com/thumb/msid-124191337,imgsize-103164,width-400,resizemode-4/prajakta-koli-with-huband-vrishank-khanal.jpg',
+      images: [
+        'https://static.toiimg.com/thumb/msid-124191337,imgsize-103164,width-400,resizemode-4/prajakta-koli-with-huband-vrishank-khanal.jpg',
+        'https://assets.vogue.in/photos/69a1aad07858d87cceea9c5a/1:1/w_3648,h_3648,c_limit/IMG_4918.JPG.jpeg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk39itHvB-R6SkKogVAF9qC3HyRl1O2nuhlojnlfwykAg2cq_lQIFxu20&s=10',
+        'https://weddingsaga.fotozoneindia.com/wp-content/uploads/2024/11/Priyadharshini-Sathish1.webp',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrR0uOqIp2nWz1oxDu-yj3eraevcFLwJ40r1rnEX5IDOdlvZzuLuHPlZw&s=10',
+        'https://mixingimages.in/wp-content/uploads/2025/05/Marriage-Wedding-Couple-Poses-4.jpg'
+      ]
+    },
+    'jaipur': {
+      name: 'Ananya & Dev',
+      location: 'Jaipur · October 2023',
+      cover: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1920&q=80',
+      images: [
+        'https://img.magnific.com/free-photo/portrait-happy-married-couple-handsome-groom-stylish-gray-suit-hugging-bride-wedding-dress-with-bouquet-while-posing-garden-wedding-day-ceremony_8353-11963.jpg?semt=ais_hybrid&w=740&q=80',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYUN9Y0vxufuhQtuE5z4R247_JVeB40TxZaZiWXtJN8w&s=10',
+        'https://media.istockphoto.com/id/2199990828/photo/couple-in-traditional-clothing-standing-at-wedding-ceremony.jpg?s=612x612&w=0&k=20&c=4s1Q29JZ0Hyp0eFMIW66b2YL-SAnsB5fOTRyauPqSas=',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDBQpn_hB0qMM0PFbMFdFxZJIkljr1TNrdSX2KCMkTsC-Lv8eONrW0hY&s=10',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoraiF8CFQgZ_f0sowAXN3OcRutodQr9XcX0nYbx8UFK36qMdOD75CCtCQ&s=10',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSqj0gPBqPnSusURrhmobwqUh-4rprCJOMAB4jNdaIkavSr_15dVLbyRI&s=10'
+      ]
+    }
+  };
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const client = urlParams.get('client');
+  let imagesToShow = [];
+
+  if (client && clientGalleries[client]) {
+    const data = clientGalleries[client];
+    const nameParts = data.name.split(' & ');
+    document.getElementById('heroTitle').innerHTML = `${nameParts[0]} & <em>${nameParts[1]}</em>`;
+    document.getElementById('heroSub').innerText = data.location;
+    document.getElementById('heroBg').style.backgroundImage = `url('${data.cover}')`;
+    document.getElementById('heroEyebrow').innerText = "Client Gallery";
+    document.getElementById('galleryLabel').innerText = "The Wedding Gallery";
+    imagesToShow = data.images;
+  } else {
+    document.getElementById('heroTitle').innerHTML = "All <em>Stories.</em>";
+    document.getElementById('heroSub').innerText = "A curated collection of moments.";
+    document.getElementById('heroBg').style.backgroundImage = `url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1920&q=80')`;
+    document.getElementById('galleryLabel').innerText = "The Collection";
+    imagesToShow = [
+      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&q=80',
+      'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1200&q=80',
+      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1200&q=80',
+      'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=80',
+      'https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=1200&q=80',
+      'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80'
+    ];
+  }
+
+  imagesToShow.forEach((img, i) => {
+    const div = document.createElement('div');
+    div.className = 'gallery-grid__item';
+    div.dataset.anim = 'fade-up';
+    div.style.transitionDelay = (i % 3) * 0.1 + 's';
+
+    div.innerHTML = `
+      <div class="gallery-grid__bg" style="background-image:url('${img}')"></div>
+      <span class="gallery-grid__caption">Click to View</span>
+    `;
+
+    div.addEventListener('click', () => window.openLightbox(img));
+    galleryGrid.appendChild(div);
+  });
+
+  document.querySelectorAll('.gallery-grid__item').forEach(el => window.revealObserver.observe(el));
+});
+</script>
+</body>
+</html>
